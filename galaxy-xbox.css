@@ -1,54 +1,29 @@
-/* Hintergrund */
-body {
-  background: radial-gradient(circle at center, #0a001a, #000000 80%) !important;
-}
-
-/* Controller allgemein */
-.controller {
+/* Global glow */
+.gamepad {
   filter:
     drop-shadow(0 0 20px #ff00ff)
-    drop-shadow(0 0 40px #00ffff)
-    drop-shadow(0 0 60px #7a00ff);
-  animation: glowPulse 2s infinite alternate;
+    drop-shadow(0 0 40px #00ffff) !important;
 }
 
-/* Glow Animation */
-@keyframes glowPulse {
-  0% {
-    filter:
-      drop-shadow(0 0 10px #ff00ff)
-      drop-shadow(0 0 20px #00ffff);
-  }
-  100% {
-    filter:
-      drop-shadow(0 0 25px #ff00ff)
-      drop-shadow(0 0 50px #00ffff);
-  }
+/* Face buttons */
+.face {
+  filter: drop-shadow(0 0 15px #ff00ff) !important;
 }
 
-/* ALLE Buttons */
-button {
-  box-shadow:
-    0 0 10px #ff00ff,
-    0 0 20px #00ffff !important;
-  transition: all 0.2s ease;
-}
-
-/* Gedrückte Buttons */
-button.pressed {
-  box-shadow:
-    0 0 25px #ffffff,
-    0 0 50px #ff00ff,
-    0 0 80px #00ffff !important;
+/* Press effect */
+.pressed {
+  filter:
+    drop-shadow(0 0 25px #ffffff)
+    drop-shadow(0 0 50px #00ffff) !important;
   transform: scale(1.2);
 }
 
 /* Sticks */
-.stick, .sticks {
+.sticks {
   filter: drop-shadow(0 0 20px #00ffff);
 }
 
-/* D-Pad */
-.dpad {
+/* Triggers & bumpers */
+.triggers, .bumpers {
   filter: drop-shadow(0 0 20px #ff00ff);
 }
